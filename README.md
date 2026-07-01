@@ -1,27 +1,31 @@
-# Toppo Doggo redesign
+# Toppo Doggo website
 
-A standalone static redesign for Toppo Doggo, a dog walking and pet services business based in Winsford.
+A simple static website redesign for Toppo Doggo, a dog walking and pet services business based in Winsford.
 
-## What is included
+## Pages
 
-- Responsive single-page website
-- Services and prices from the existing Square site
-- About Alex section
-- Location, hours and contact details
-- Testimonial section
-- Square Appointments booking buttons
-- Enquiry form mockup for future integration
+- `index.html` - homepage
+- `services.html` - services overview
+- `15-minute-walk.html` - 15 minute walk service page
+- `30-minute-walk.html` - 30 minute walk service page
+- `60-minute-walk.html` - 60 minute walk service page
+- `quick-visit.html` - quick visit service page
+- `pet-sitting.html` - pet sitting service page
+- `pet-taxi.html` - pet taxi service page
+- `about.html` - about Alex
+- `contact.html` - contact details and enquiry form mockup
+- `style.css` - shared styling
 
 ## Booking link
 
-The booking buttons currently point to:
+Booking buttons currently point to:
 
 ```text
 https://toppo-doggo.square.site/s/appointments
 ```
 
-If Square uses a different live appointment URL, update the `href` values in `index.html`.
+If Square uses a different live appointment URL, update the `href` values in the HTML files.
 
-## Deployment
+## Notes
 
-This project can be hosted as a simple static site using GitHub Pages, Netlify, Vercel, or any standard web host.
+The site is plain HTML and CSS, so it can be hosted with GitHub Pages, Netlify, Vercel, or any static hosting provider.
