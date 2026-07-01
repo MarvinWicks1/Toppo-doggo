@@ -4,333 +4,130 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Toppo Doggo | Dog Walking and Pet Services in Winsford</title>
-  <meta name="description" content="Toppo Doggo provides dog walking, pet sitting, quick visits and pet taxi services in Winsford. Experienced, insured and DBS certified.">
-  <style>
-    :root {
-      --ink: #151515;
-      --muted: #59676a;
-      --teal: #3f9ca9;
-      --teal-dark: #20717d;
-      --cream: #fff8ed;
-      --soft: #f6faf9;
-      --line: #dde8e6;
-      --white: #ffffff;
-      --shadow: 0 18px 45px rgba(21, 21, 21, 0.12);
-      --radius: 8px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--ink);
-      background: var(--white);
-      line-height: 1.5;
-    }
-    a { color: inherit; text-decoration: none; }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      border-radius: 999px;
-      padding: 13px 22px;
-      border: 1px solid transparent;
-      font-weight: 850;
-      cursor: pointer;
-      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
-    }
-    .button:hover { transform: translateY(-1px); }
-    .button.primary { background: var(--teal); color: var(--white); box-shadow: 0 12px 28px rgba(63, 156, 169, 0.26); }
-    .button.secondary { background: var(--white); color: var(--ink); border-color: var(--line); }
-    .button.dark { background: var(--ink); color: var(--white); }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 14px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
-    .brand { display: flex; align-items: center; gap: 11px; font-weight: 950; font-size: 18px; }
-    .logo {
-      width: 48px;
-      height: 48px;
-      border-radius: 8px;
-      background: radial-gradient(circle at 50% 28%, #f7c766 0 10px, transparent 11px), radial-gradient(circle at 36% 36%, #f7c766 0 7px, transparent 8px), radial-gradient(circle at 64% 36%, #f7c766 0 7px, transparent 8px), linear-gradient(145deg, #fff5d9, #e6fff5);
-      border: 1px solid #e7d8a7;
-      display: grid;
-      place-items: end center;
-      padding-bottom: 7px;
-      color: var(--teal-dark);
-      font-size: 10px;
-      line-height: 1;
-      font-weight: 950;
-      text-align: center;
-    }
-    nav { display: flex; gap: 24px; align-items: center; color: var(--muted); font-size: 14px; font-weight: 800; }
-
-    .hero {
-      background: linear-gradient(90deg, rgba(21, 21, 21, 0.72), rgba(21, 21, 21, 0.14)), radial-gradient(circle at 82% 28%, rgba(255, 248, 237, 0.88), transparent 26%), linear-gradient(135deg, #bfe5df, #f3e4ca);
-      color: var(--white);
-    }
-    .hero-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-      min-height: 690px;
-      padding: 84px 22px;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 420px;
-      gap: 46px;
-      align-items: center;
-    }
-    .eyebrow {
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      padding: 8px 13px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.16);
-      border: 1px solid rgba(255, 255, 255, 0.28);
-      font-size: 13px;
-      font-weight: 900;
-      margin-bottom: 18px;
-    }
-    h1 { margin: 0; max-width: 720px; font-size: clamp(42px, 6vw, 72px); line-height: 0.98; letter-spacing: 0; }
-    .hero-copy { max-width: 620px; margin: 22px 0 0; color: rgba(255, 255, 255, 0.92); font-size: 19px; font-weight: 600; }
-    .hero-actions, .trust-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-    .pill { padding: 10px 13px; border-radius: 999px; background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.28); font-weight: 850; font-size: 14px; }
-    .hero-card { background: var(--white); color: var(--ink); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
-    .dog-photo {
-      min-height: 310px;
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(21, 21, 21, 0.04), rgba(21, 21, 21, 0.24)), radial-gradient(circle at 42% 42%, #8a5c3b 0 38px, transparent 39px), radial-gradient(circle at 45% 58%, #d9a76f 0 62px, transparent 63px), linear-gradient(135deg, #e9f3f0, #ffffff 48%, #b7c7bd);
-      display: grid;
-      place-items: end start;
-      padding: 20px;
-      overflow: hidden;
-    }
-    .dog-photo span { background: rgba(255, 255, 255, 0.92); border-radius: 999px; padding: 9px 12px; font-weight: 900; color: var(--teal-dark); font-size: 13px; }
-    .quick-info { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
-    .info-tile { background: var(--soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; }
-    .info-tile strong { display: block; color: var(--teal-dark); font-size: 20px; line-height: 1.1; }
-    .info-tile span { color: var(--muted); font-size: 13px; font-weight: 750; }
-
-    section { padding: 78px 22px; }
-    .wrap { max-width: 1180px; margin: 0 auto; }
-    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 28px; margin-bottom: 28px; }
-    h2 { margin: 0; color: var(--ink); font-size: clamp(30px, 4vw, 48px); line-height: 1.05; letter-spacing: 0; }
-    .section-head p { max-width: 520px; color: var(--muted); margin: 0; font-weight: 650; }
-
-    .services, .appointments { background: var(--soft); }
-    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: 0 10px 28px rgba(21, 21, 21, 0.06); }
-    .card h3 { margin: 0 0 8px; font-size: 22px; }
-    .card p { margin: 0; color: var(--muted); }
-    .price { display: inline-flex; margin-top: 18px; color: var(--teal-dark); font-weight: 950; font-size: 18px; }
-
-    .about { background: var(--cream); }
-    .split { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 44px; align-items: start; }
-    .about-copy { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: 0 10px 28px rgba(21, 21, 21, 0.05); }
-    .about-copy p { margin: 0 0 16px; color: #2a2f31; font-weight: 600; }
-    .about-copy p:last-child { margin-bottom: 0; }
-    .checks { display: grid; gap: 12px; margin-top: 22px; }
-    .check { display: flex; gap: 12px; align-items: flex-start; color: var(--muted); font-weight: 700; }
-    .tick { flex: 0 0 auto; width: 25px; height: 25px; border-radius: 50%; background: var(--teal); color: var(--white); display: grid; place-items: center; font-weight: 950; font-size: 14px; }
-    .testimonial { background: var(--ink); color: var(--white); border-radius: var(--radius); padding: 32px; margin-top: 18px; }
-    .testimonial p { margin: 0; font-size: 25px; line-height: 1.25; font-weight: 900; }
-
-    .location-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
-    .hours { list-style: none; padding: 0; margin: 0; display: grid; gap: 7px; color: var(--muted); font-weight: 700; }
-    .booking-panel { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); display: grid; grid-template-columns: 1fr 0.8fr; overflow: hidden; }
-    .booking-copy { padding: 34px; }
-    .booking-copy p { color: var(--muted); font-weight: 650; }
-    .booking-list { border-left: 1px solid var(--line); background: #fbfdfd; }
-    .booking-item { padding: 22px; border-bottom: 1px solid var(--line); }
-    .booking-item:last-child { border-bottom: 0; }
-    .booking-item strong { display: block; font-size: 18px; }
-    .booking-item span { color: var(--teal-dark); font-weight: 900; }
-
-    .enquiry { background: var(--ink); color: var(--white); }
-    .enquiry h2 { color: var(--white); }
-    .enquiry p { color: rgba(255, 255, 255, 0.76); }
-    .form-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 36px; align-items: start; }
-    form { background: var(--white); color: var(--ink); border-radius: var(--radius); padding: 24px; display: grid; gap: 13px; }
-    label { font-size: 14px; font-weight: 850; }
-    input, select, textarea { width: 100%; border: 1px solid var(--line); border-radius: var(--radius); padding: 13px 14px; font: inherit; color: var(--ink); background: var(--white); }
-    textarea { min-height: 112px; resize: vertical; }
-    footer { background: #2e3540; color: rgba(255, 255, 255, 0.78); padding: 28px 22px; text-align: center; font-size: 14px; font-weight: 650; }
-
-    @media (max-width: 900px) {
-      nav { display: none; }
-      .hero-inner, .split, .booking-panel, .form-grid { grid-template-columns: 1fr; }
-      .hero-inner { min-height: auto; }
-      .booking-list { border-left: 0; border-top: 1px solid var(--line); }
-      .service-grid, .location-grid { grid-template-columns: 1fr; }
-      .section-head { display: block; }
-      .section-head p { margin-top: 12px; }
-    }
-    @media (max-width: 560px) {
-      .nav { padding: 12px 16px; }
-      .brand span:last-child { display: none; }
-      .hero-inner { padding: 54px 16px; }
-      section { padding: 56px 16px; }
-      .hero-actions, .button { width: 100%; }
-      .quick-info { grid-template-columns: 1fr; }
-      h1 { font-size: 42px; }
-    }
-  </style>
+  <meta name="description" content="Dog walking, pet sitting, quick visits and pet taxi services in Winsford from Toppo Doggo.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
     <div class="nav">
-      <a class="brand" href="#top" aria-label="Toppo Doggo home">
-        <span class="logo">TOPPO<br>DOGGO</span>
+      <a class="brand" href="index.html" aria-label="Toppo Doggo home">
+        <span class="logo-mark">TOPPO<br>DOGGO</span>
         <span>Toppo Doggo</span>
       </a>
-      <nav aria-label="Primary navigation">
-        <a href="#services">Services</a>
-        <a href="#about">About Alex</a>
-        <a href="#booking">Appointments</a>
-        <a href="#contact">Contact</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="button" href="https://toppo-doggo.square.site/s/appointments">Book</a>
       </nav>
-      <a class="button primary" href="https://toppo-doggo.square.site/s/appointments">Book Now</a>
     </div>
   </header>
 
-  <main id="top">
+  <main id="main">
     <section class="hero">
       <div class="hero-inner">
         <div>
-          <div class="eyebrow">Dog walking and pet services in Winsford</div>
-          <h1>Reliable, one-to-one care for pets who are part of the family.</h1>
-          <p class="hero-copy">Toppo Doggo provides dog walks, pet sitting, quick visits and pet taxi services tailored to your pet's needs. Experienced, insured and DBS certified.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="https://toppo-doggo.square.site/s/appointments">Book through Square</a>
-            <a class="button secondary" href="#services">View Services</a>
-          </div>
-          <div class="trust-row" aria-label="Trust signals">
-            <span class="pill">Experienced</span>
-            <span class="pill">Insured</span>
-            <span class="pill">DBS Certified</span>
-            <span class="pill">All breeds welcome</span>
+          <p class="eyebrow">Dog walking and pet services in Winsford</p>
+          <h1>One-to-one pet care from Alex at Toppo Doggo.</h1>
+          <p class="lead">Walks, quick visits, pet sitting and pet taxi services for owners who want clear communication and care tailored to their pet.</p>
+          <div class="actions">
+            <a class="button" href="https://toppo-doggo.square.site/s/appointments">Book an appointment</a>
+            <a class="button secondary" href="services.html">View services</a>
           </div>
         </div>
-
-        <aside class="hero-card">
-          <div class="dog-photo"><span>Photo gallery ready</span></div>
-          <div class="quick-info">
-            <div class="info-tile"><strong>09:00-16:00</strong><span>Monday to Friday</span></div>
-            <div class="info-tile"><strong>Free</strong><span>Meet and greet</span></div>
-          </div>
+        <aside class="notice-card">
+          <strong>Experienced, insured and DBS certified</strong>
+          <p>Based on Carlisle Close, Winsford. Open Monday to Friday, 09:00 to 16:00.</p>
         </aside>
       </div>
     </section>
 
-    <section class="services" id="services">
+    <section class="section">
       <div class="wrap">
         <div class="section-head">
-          <h2>Services and prices</h2>
-          <p>Clear options for daily walks, visits, pet sitting and appointment transport. Bookings can continue to run through Square Appointments.</p>
+          <h2>Services</h2>
+          <p>Choose the option that best fits your pet. Each service has its own page with more detail before you book.</p>
         </div>
-        <div class="service-grid">
-          <article class="card"><h3>15 Minute Walk</h3><p>A shorter walk for a quick toilet break and leg stretch. Also suitable for older dogs needing gentle exercise.</p><span class="price">£10</span></article>
-          <article class="card"><h3>30 Minute Walk</h3><p>An average length walk suitable for most dogs.</p><span class="price">£15</span></article>
-          <article class="card"><h3>60 Minute Walk</h3><p>A longer walk for larger dogs or dogs with more energy.</p><span class="price">£20</span></article>
-          <article class="card"><h3>Quick Visit</h3><p>A quick 15 minute check-in to let pets out, top up food, play, or comfort smaller animals while you are away.</p><span class="price">£10</span></article>
-          <article class="card"><h3>Pet Sitting</h3><p>Tailored care in the comfort of your own home, including walks, feeding, playtime and attention.</p><span class="price">From £35/day</span></article>
-          <article class="card"><h3>Pet Taxi</h3><p>Transport for appointments such as grooming, vets or kennel visits. Prices start from £10 depending on mileage.</p><span class="price">From £10</span></article>
+        <div class="grid">
+          <article class="card">
+            <h3>15 Minute Walk</h3>
+            <p>A short toilet break and leg stretch. Often useful for older dogs or dogs who only need a small amount of exercise.</p>
+            <span class="price">&pound;10</span>
+            <a class="card-link" href="15-minute-walk.html">Read more</a>
+          </article>
+          <article class="card">
+            <h3>30 Minute Walk</h3>
+            <p>An average length walk for most dogs, with time to stretch their legs and enjoy some fresh air.</p>
+            <span class="price">&pound;15</span>
+            <a class="card-link" href="30-minute-walk.html">Read more</a>
+          </article>
+          <article class="card">
+            <h3>60 Minute Walk</h3>
+            <p>A longer walk for bigger dogs, active dogs, or dogs who benefit from more time outside.</p>
+            <span class="price">&pound;20</span>
+            <a class="card-link" href="60-minute-walk.html">Read more</a>
+          </article>
+          <article class="card">
+            <h3>Quick Visit</h3>
+            <p>A short home visit to check in, let pets out, top up food, and give them a bit of fuss.</p>
+            <span class="price">&pound;10</span>
+            <a class="card-link" href="quick-visit.html">Read more</a>
+          </article>
+          <article class="card">
+            <h3>Pet Sitting</h3>
+            <p>Care in your pet's own home while you are away, tailored around their normal routine.</p>
+            <span class="price">From &pound;35/day</span>
+            <a class="card-link" href="pet-sitting.html">Read more</a>
+          </article>
+          <article class="card">
+            <h3>Pet Taxi</h3>
+            <p>Transport for appointments such as vets, grooming or kennels. Price depends on mileage.</p>
+            <span class="price">From &pound;10</span>
+            <a class="card-link" href="pet-taxi.html">Read more</a>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="about" id="about">
+    <section class="section cream">
       <div class="wrap split">
         <div>
           <h2>Meet Alex</h2>
-          <div class="checks">
-            <div class="check"><span class="tick">✓</span><span>One-to-one walks and care tailored to each pet's needs.</span></div>
-            <div class="check"><span class="tick">✓</span><span>Free meet and greet before the first booking.</span></div>
-            <div class="check"><span class="tick">✓</span><span>Designed around trust, comfort and treating pets like family.</span></div>
+          <p>Toppo Doggo is run by Alex, who started the business after leaving a long NHS career to work with animals.</p>
+          <p>Alex offers one-to-one care and a free meet and greet before the first booking, so walks and visits can be planned around your pet's needs.</p>
+          <div class="actions">
+            <a class="button secondary" href="about.html">More about Alex</a>
           </div>
-          <div class="testimonial"><p>“Honey loves Alex coming round to take her for a walk and would recommend her.”</p></div>
         </div>
-        <div class="about-copy">
-          <p>Hi, my name's Alex. I'm starting small but unbelievably proud to be introducing my dog walking and pet services business, Toppo Doggo.</p>
-          <p>My number one core value is to treat your pets like the family members that they are.</p>
-          <p>I've been taking care of family and friends' pets for years and, after finally having the courage to leave my NHS job of over a decade, I would like to realise my dream of working with animals.</p>
-          <p>My services provide one-to-one walks and care tailored to your pet's needs. To do this, I offer a free meet and greet upon your first booking to get to know you and your pet.</p>
-          <p>I look forward to meeting you all on this new venture.</p>
+        <div class="quote">
+          <p>"Honey loves Alex coming round to take her for a walk and would recommend her."</p>
         </div>
       </div>
     </section>
 
-    <section class="location" id="location">
-      <div class="wrap">
-        <div class="section-head"><h2>Location and hours</h2><p>Based in Winsford and available weekdays for dog walking and pet care appointments.</p></div>
-        <div class="location-grid">
-          <article class="card"><h3>Address</h3><p>Carlisle Close<br>Winsford, England CW7</p></article>
-          <article class="card"><h3>Contact</h3><p>07749197609<br>toppodoggodw@gmail.com</p></article>
-          <article class="card"><h3>Opening Hours</h3><ul class="hours"><li>Monday 09:00 - 16:00</li><li>Tuesday 09:00 - 16:00</li><li>Wednesday 09:00 - 16:00</li><li>Thursday 09:00 - 16:00</li><li>Friday 09:00 - 16:00</li><li>Saturday Closed</li><li>Sunday Closed</li></ul></article>
+    <section class="section">
+      <div class="wrap contact-panel">
+        <h2>Ready to book or ask a question?</h2>
+        <p>Use the Square booking link for appointments, or contact Alex if you want to check availability first.</p>
+        <p><strong>Phone:</strong> <a href="tel:07749197609">07749197609</a><br><strong>Email:</strong> <a href="mailto:toppodoggodw@gmail.com">toppodoggodw@gmail.com</a></p>
+        <div class="actions">
+          <a class="button" href="https://toppo-doggo.square.site/s/appointments">Book through Square</a>
+          <a class="button secondary" href="contact.html">Contact Alex</a>
         </div>
-      </div>
-    </section>
-
-    <section class="appointments" id="booking">
-      <div class="wrap">
-        <div class="booking-panel">
-          <div class="booking-copy">
-            <h2>Book an appointment</h2>
-            <p>This button links directly to Toppo Doggo's Square booking page, so Alex can keep managing bookings through the system she already uses.</p>
-            <a class="button primary" href="https://toppo-doggo.square.site/s/appointments">Book through Square Appointments</a>
-            <a class="button secondary" href="#contact" style="margin-left:8px;">Send an Enquiry</a>
-          </div>
-          <div class="booking-list" aria-label="Appointment options">
-            <div class="booking-item"><strong>30 Minute Walk</strong><span>Book now · £15.00</span></div>
-            <div class="booking-item"><strong>60 Minute Walk</strong><span>Book now · £20.00</span></div>
-            <div class="booking-item"><strong>15 Minute Walk</strong><span>Book now · £10.00</span></div>
-            <div class="booking-item"><strong>Quick Visit</strong><span>Book now · £10.00</span></div>
-            <div class="booking-item"><strong>Pet Sitting</strong><span>Book now · Price varies</span></div>
-            <div class="booking-item"><strong>Taxi Service</strong><span>Book now · Price varies</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="enquiry" id="contact">
-      <div class="wrap form-grid">
-        <div>
-          <h2>Request pet sitting or ask a question</h2>
-          <p>Use this form for enquiries that need a bit more information before booking. A live version could send to email, connect to Square, or sit alongside the Square booking link.</p>
-          <div class="checks">
-            <div class="check"><span class="tick">✓</span><span>Please provide the service, preferred date, preferred time, and any key details about your pet.</span></div>
-            <div class="check"><span class="tick">✓</span><span>An initial meet and greet helps tailor walks and care to your pet's specific needs.</span></div>
-          </div>
-        </div>
-        <form>
-          <div><label for="name">Full name</label><input id="name" placeholder="Full name"></div>
-          <div><label for="email">Email</label><input id="email" type="email" placeholder="Email"></div>
-          <div><label for="phone">Phone number</label><input id="phone" placeholder="Phone number"></div>
-          <div><label for="service">Which service are you requesting?</label><select id="service"><option>Dog walking</option><option>Quick visit</option><option>Pet sitting</option><option>Pet taxi</option><option>General enquiry</option></select></div>
-          <div><label for="details">Pet details</label><textarea id="details" placeholder="Tell Alex about your pet, dates, times and anything important to know."></textarea></div>
-          <button class="button dark" type="button">Submit Enquiry</button>
-        </form>
       </div>
     </section>
   </main>
 
-  <footer>© 2026 Toppo Doggo · Dog Walking and Pet Services · Winsford, England</footer>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Toppo Doggo</span>
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
